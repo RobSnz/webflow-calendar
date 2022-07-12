@@ -1713,6 +1713,7 @@ function _exclEndDay(end, allDay) {
 
 
 function lazySegBind(container, segs, bindHandlers) {
+	console.error("Watch the Bean");
 	container.unbind('mouseover').mouseover(function(ev) {
 		var parent=ev.target, e,
 			i, seg;
