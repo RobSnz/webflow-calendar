@@ -2914,7 +2914,7 @@ function AgendaView(element, calendar, viewName) {
 	
 	
 	function updateOptions() {
-		console.error("no, this one")"
+		console.error("no, this one");
 	
 		tm = opt('theme') ? 'ui' : 'fc';
 		rtl = opt('isRTL')
