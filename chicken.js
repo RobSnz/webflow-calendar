@@ -5668,6 +5668,8 @@ function DayEventRenderer() {
 
 	
 	function draggableDayEvent(event, eventElement) {
+				console.error("23453453252345");
+		
 		var hoverListener = getHoverListener();
 		var dayDelta;
 		eventElement.draggable({
@@ -5729,6 +5731,8 @@ function DayEventRenderer() {
 			});
 		
 		handle.mousedown(function(ev) {
+				console.error("erterteretreterter");
+			
 			if (ev.which != 1) {
 				return; // needs to be left mouse button
 			}
@@ -5791,6 +5795,7 @@ function DayEventRenderer() {
 			}, ev);
 			
 			function mouseup(ev) {
+				console.error("3oijr3iurje");
 				trigger('eventResizeStop', this, event, ev);
 				$('body').css('cursor', '');
 				hoverListener.stop();
@@ -5882,6 +5887,7 @@ function SelectionManager() {
 	// unselectAuto
 	if (opt('selectable') && opt('unselectAuto')) {
 		$(document).mousedown(function(ev) {
+			console.error("wiruh3wuiyrh3uyrheuir");
 			var ignore = opt('unselectCancel');
 			if (ignore) {
 				if ($(ev.target).parents(ignore).length) { // could be optimized to stop after first match
@@ -5919,6 +5925,7 @@ function SelectionManager() {
 	
 	
 	function daySelectionMousedown(ev) { // not really a generic manager method, oh well
+		console.error("iutheiutheiutheruthr");
 		var cellToDate = t.cellToDate;
 		var getIsCellAllDay = t.getIsCellAllDay;
 		var hoverListener = t.getHoverListener();
@@ -5937,6 +5944,7 @@ function SelectionManager() {
 				}
 			}, ev);
 			$(document).one('mouseup', function(ev) {
+				console.error("whuiry3ury3urieh4ire");
 				hoverListener.stop();
 				if (dates) {
 					if (+dates[0] == +dates[1]) {
