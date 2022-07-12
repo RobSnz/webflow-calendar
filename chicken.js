@@ -4692,7 +4692,7 @@ function View(element, calendar, viewName) {
 	
 	// attaches eventClick, eventMouseover, eventMouseout
 	function eventElementHandlers(event, eventElement) {
-		console.log("eirthufguy");
+		console.log(event);
 		eventElement
 			.click(function(ev) {
 				if (!eventElement.hasClass('ui-draggable-dragging') &&
