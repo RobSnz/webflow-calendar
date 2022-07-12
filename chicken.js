@@ -2218,7 +2218,7 @@ function BasicView(element, calendar, viewName) {
 	
 	
 	function updateOptions() {
-		console.error("this one?")"
+		console.error("this one?");
 		tm = opt('theme') ? 'ui' : 'fc';
 		colFormat = opt('columnFormat');
 
