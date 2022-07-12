@@ -2460,12 +2460,14 @@ function BasicView(element, calendar, viewName) {
 	
 	
 	function dayBind(days) {
+		console.error("potato");
 		days.click(dayClick)
 			.mousedown(daySelectionMousedown);
 	}
 	
 	
 	function dayClick(ev) {
+		console.error("cactus");
 		if (!opt('selectable')) { // if selectable, SelectionManager will worry about dayClick
 			var date = parseISO8601($(this).data('date'));
 			trigger('dayClick', this, date, true, ev);
