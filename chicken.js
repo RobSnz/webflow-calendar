@@ -5355,8 +5355,10 @@ function DayEventRenderer() {
 
 		if (url) {
 			html += "<a href='" + htmlEscape(url) + "'";
+			console.log("vitalis");
 		}else{
 			html += "<div";
+			console.log("vorago");
 		}
 		html +=
 			" class='" + classNames.join(' ') + "'" +
