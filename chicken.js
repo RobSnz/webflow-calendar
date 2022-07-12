@@ -782,9 +782,14 @@ function Header(calendar, options) {
 					}else{
 						var buttonClick;
 						if (calendar[buttonName]) {
-							buttonClick = calendar[buttonName]; // calendar method
+							console.log("woiekoiwe");
+							buttonClick = function() {
+							  console.log("sadfjlk2348");
+							  calendar[buttonName]();
+							}
 						}
 						else if (fcViews[buttonName]) {
+							console.log("eiruhgrueyh");
 							buttonClick = function() {
 								button.removeClass(tm + '-state-hover'); // forget why
 								calendar.changeView(buttonName);
@@ -805,6 +810,7 @@ function Header(calendar, options) {
 								)
 								.click(function() {
 									if (!button.hasClass(tm + '-state-disabled')) {
+										console.log("weurjiweorjweoj");
 										buttonClick();
 									}
 								})
