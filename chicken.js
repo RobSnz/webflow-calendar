@@ -3979,6 +3979,7 @@ function AgendaEventRenderer() {
       console.log(event);
 		}else{
 			html += "div";
+			console.log(event);
 		}
 		html +=
 			" class='" + classes.join(' ') + "'" +
