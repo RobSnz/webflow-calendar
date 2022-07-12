@@ -3956,6 +3956,7 @@ function AgendaEventRenderer() {
 	
 	
 	function slotSegHtml(event, seg) {
+		console.log(event);
 		var html = "<";
 		var url = event.url;
 		var skinCss = getSkinCss(event, opt);
@@ -3975,11 +3976,9 @@ function AgendaEventRenderer() {
 		}
 		if (url) {
 			html += "a href='" + htmlEscape(event.url) + "'";
-      //createPopup(event);
-      console.log(event);
+      			//createPopup(event);
 		}else{
 			html += "div";
-			console.log(event);
 		}
 		html +=
 			" class='" + classes.join(' ') + "'" +
