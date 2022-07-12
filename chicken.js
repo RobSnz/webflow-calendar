@@ -2218,6 +2218,7 @@ function BasicView(element, calendar, viewName) {
 	
 	
 	function updateOptions() {
+		console.error("this one?")"
 		tm = opt('theme') ? 'ui' : 'fc';
 		colFormat = opt('columnFormat');
 
@@ -2913,7 +2914,8 @@ function AgendaView(element, calendar, viewName) {
 	
 	
 	function updateOptions() {
-
+		console.error("no, this one")"
+	
 		tm = opt('theme') ? 'ui' : 'fc';
 		rtl = opt('isRTL')
 		minMinute = parseTime(opt('minTime'));
@@ -3988,6 +3990,7 @@ function AgendaEventRenderer() {
 		if (url) {
 			html += "a href='" + htmlEscape(event.url) + "'";
       			//createPopup(event);
+			console.error("test76576898");
 		}else{
 			html += "div";
 		}
@@ -4019,9 +4022,9 @@ function AgendaEventRenderer() {
 		return html;
 	}
 	
-  function createPopup(event) {
-     
-  }
+	  function createPopup(event) {
+
+	  }
 	
 	function bindSlotSeg(event, eventElement, seg) {
 		var timeElement = eventElement.find('div.fc-event-time');
