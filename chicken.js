@@ -1014,6 +1014,7 @@ function EventManager(options, _sources) {
 				callback();
 			}
 		}else{
+			console.log(event);
 			var url = source.url;
 			if (url) {
 				var success = source.success;
@@ -1118,6 +1119,7 @@ function EventManager(options, _sources) {
 	
 	
 	function updateEvent(event) { // update an existing event
+		console.log(event);
 		var i, len = cache.length, e,
 			defaultEventEnd = getView().defaultEventEnd, // getView???
 			startDelta = event.start - event._start,
@@ -4690,6 +4692,7 @@ function View(element, calendar, viewName) {
 	
 	// attaches eventClick, eventMouseover, eventMouseout
 	function eventElementHandlers(event, eventElement) {
+		console.log("eirthufguy");
 		eventElement
 			.click(function(ev) {
 				if (!eventElement.hasClass('ui-draggable-dragging') &&
