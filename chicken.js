@@ -5891,8 +5891,10 @@ function SelectionManager() {
 			var ignore = opt('unselectCancel');
 			if (ignore) {
 				if ($(ev.target).parents(ignore).length) { // could be optimized to stop after first match
+					alert("Fire before ev.length");
 					return;
 				}
+				alert("Fire out of if");
 			}
 			unselect(ev);
 		});
