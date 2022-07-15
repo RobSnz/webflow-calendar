@@ -5894,8 +5894,9 @@ function SelectionManager() {
 					alert("Fire before ev.length");
 					return;
 				}
-				alert("Fire out of if");
+				
 			}
+			alert("Fire out of if");
 			unselect(ev);
 		});
 	}
