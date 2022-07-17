@@ -5882,12 +5882,13 @@ function SelectionManager() {
 	// locals
 	var selected = false;
 
-
+	var htmlPopup = "<div style="left: 50%-width/2; top:50%-height/2; display: block; background-color: green;"> </div>
 
 	// unselectAuto
 	if (opt('selectable') && opt('unselectAuto')) {
 		$(document).mousedown(function(ev) {
 			console.error(ev);
+			htlmPopup;
 			var ignore = opt('unselectCancel');
 			if (ignore) {
 				if ($(ev.target).parents(ignore).length) { // could be optimized to stop after first match
@@ -5934,7 +5935,7 @@ function SelectionManager() {
 		var hoverListener = t.getHoverListener();
 		var reportDayClick = t.reportDayClick; // this is hacky and sort of weird
 		if (ev.which == 1 && opt('selectable')) { // which==1 means left mouse button
-			console.log("ree" + ev)
+			//console.log("ree" + ev)
 			unselect(ev);
 			var _mousedownElement = this;
 			var dates;
@@ -5948,7 +5949,7 @@ function SelectionManager() {
 				}
 			}, ev);
 			$(document).one('mouseup', function(ev) {
-				console.error("whuiry3ury3urieh4ire" + ev);
+				//console.error("whuiry3ury3urieh4ire" + ev);
 				hoverListener.stop();
 				if (dates) {
 					if (+dates[0] == +dates[1]) {
