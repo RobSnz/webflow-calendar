@@ -5906,7 +5906,7 @@ function SelectionManager() {
 			document.body.appendChild(htmlPopup);
 			
 			document.getElementById("close-button").addEventListener("click", () => {
- 			htmlPopup.parentNode.removeChild(htmlPopup);
+ 			htmlPopup.parentNode.removeChild(htmlPopup));
 				
 			var ignore = opt('unselectCancel');
 			if (ignore) {
