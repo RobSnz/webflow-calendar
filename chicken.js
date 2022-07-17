@@ -5886,8 +5886,8 @@ function SelectionManager() {
 
 	htmlPopup.style.cssText = `position: absolute; width: 500px; height: 400px; display: block; background-color: green;`;
 
+	htmlPopup.style.top = "calc(50%)";
 	htmlPopup.style.left = "calc(50%)";
-	htmlPopup.style.right = "calc(50%)";
 
 	htmlPopup.innerText = "beans";
 
