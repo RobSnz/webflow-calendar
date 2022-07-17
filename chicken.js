@@ -5883,7 +5883,7 @@ function SelectionManager() {
 	var selected = false;
 
 	let htmlPopup = document.createElement("div");
-
+	htmlPopup.innerHTML = `<div id="close-button">close</div>`;
 	htmlPopup.style.cssText = `position: fixed;
 		width: 60%;
 		height: 40%;
@@ -5904,6 +5904,10 @@ function SelectionManager() {
 		$(document).mousedown(function(ev) {
 			console.error(ev);
 			document.body.appendChild(htmlPopup);
+			
+			document.getElementById("close-button").addEventListener("click", () => {
+ 			htmlPopup.parentNode.removeChild(htmlPopup);
+				
 			var ignore = opt('unselectCancel');
 			if (ignore) {
 				if ($(ev.target).parents(ignore).length) { // could be optimized to stop after first match
