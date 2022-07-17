@@ -5882,13 +5882,13 @@ function SelectionManager() {
 	// locals
 	var selected = false;
 
-	var htmlPopup = "<div style="left: 50%-width/2; top:50%-height/2; display: block; background-color: green;"> </div>
+	var htmlPopup = "<div style="left: 50%-width/2; top:50%-height/2; display: block; background-color: green;"> </div>";
 
 	// unselectAuto
 	if (opt('selectable') && opt('unselectAuto')) {
 		$(document).mousedown(function(ev) {
 			console.error(ev);
-			htlmPopup;
+			htmlPopup;
 			var ignore = opt('unselectCancel');
 			if (ignore) {
 				if ($(ev.target).parents(ignore).length) { // could be optimized to stop after first match
