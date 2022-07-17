@@ -5891,12 +5891,12 @@ function SelectionManager() {
 			var ignore = opt('unselectCancel');
 			if (ignore) {
 				if ($(ev.target).parents(ignore).length) { // could be optimized to stop after first match
-					alert("Fire before ev.length");
+					//alert("Fire before ev.length");
 					return;
 				}
 				
 			}
-			alert("Fire out of if");
+			//alert("Fire out of if");
 			unselect(ev);
 		});
 	}
@@ -5934,6 +5934,7 @@ function SelectionManager() {
 		var hoverListener = t.getHoverListener();
 		var reportDayClick = t.reportDayClick; // this is hacky and sort of weird
 		if (ev.which == 1 && opt('selectable')) { // which==1 means left mouse button
+			console.log("ree" + ev)
 			unselect(ev);
 			var _mousedownElement = this;
 			var dates;
@@ -5947,7 +5948,7 @@ function SelectionManager() {
 				}
 			}, ev);
 			$(document).one('mouseup', function(ev) {
-				console.error("whuiry3ury3urieh4ire");
+				console.error("whuiry3ury3urieh4ire" + ev);
 				hoverListener.stop();
 				if (dates) {
 					if (+dates[0] == +dates[1]) {
