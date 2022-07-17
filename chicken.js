@@ -5884,7 +5884,15 @@ function SelectionManager() {
 
 	let htmlPopup = document.createElement("div");
 
-	htmlPopup.style.cssText = `position: absolute; width: 500px; height: 400px; display: block; background-color: green;`;
+	htmlPopup.style.cssText = `position: fixed;
+		width: 60%;
+		height: 40%;
+		display: block;
+		background-color: green;
+		top: calc(50%);
+		left: calc(50%);
+		margin-top: -20%;
+		margin-left: -30%;`;
 
 	htmlPopup.style.top = "calc(50%)";
 	htmlPopup.style.left = "calc(50%)";
