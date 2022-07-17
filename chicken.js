@@ -5897,7 +5897,7 @@ function SelectionManager() {
 	htmlPopup.style.top = "calc(50%)";
 	htmlPopup.style.left = "calc(50%)";
 
-	htmlPopup.innerText = "beans";
+	//htmlPopup.innerText = "beans";
 
 	// unselectAuto
 	if (opt('selectable') && opt('unselectAuto')) {
@@ -5905,9 +5905,9 @@ function SelectionManager() {
 			console.error(ev);
 			document.body.appendChild(htmlPopup);
 			
-			document.getElementById("close-button").addEventListener("click", () => {
-  				htmlPopup.parentNode.removeChild(htmlPopup);
-			});
+			document.getElementById("close-button").onclick = () => {
+			  htmlPopup.parentNode.removeChild(htmlPopup);
+			};
 				
 			var ignore = opt('unselectCancel');
 			if (ignore) {
