@@ -5888,7 +5888,7 @@ function SelectionManager() {
 	if (opt('selectable') && opt('unselectAuto')) {
 		$(document).mousedown(function(ev) {
 			console.error(ev);
-			htmlPopup;
+			document.body.appendChild(htmlPopup);
 			var ignore = opt('unselectCancel');
 			if (ignore) {
 				if ($(ev.target).parents(ignore).length) { // could be optimized to stop after first match
