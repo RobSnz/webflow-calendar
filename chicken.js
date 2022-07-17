@@ -5332,7 +5332,7 @@ function DayEventRenderer() {
 		var isRTL = opt('isRTL');
 		var event = segment.event;
 		var url = event.url;
-
+		console.log(event);
 		// generate the list of CSS classNames
 		var classNames = [ 'fc-event', 'fc-event-hori' ];
 		if (isEventDraggable(event)) {
