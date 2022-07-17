@@ -5882,7 +5882,10 @@ function SelectionManager() {
 	// locals
 	var selected = false;
 
-	var htmlPopup = "<div style="left: 50%-width/2; top:50%-height/2; display: block; background-color: green;"> </div>";
+	var htmlPopup = `<div style="position: absolute; width: 500px; height: 400px; display: block; background-color: green;">beans</div>`;
+
+		htmlPopup.style.left = "calc(50%-250px)";
+		htmlPopup.style.right = "calc(50%-200px)";
 
 	// unselectAuto
 	if (opt('selectable') && opt('unselectAuto')) {
