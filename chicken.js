@@ -5882,10 +5882,14 @@ function SelectionManager() {
 	// locals
 	var selected = false;
 
-	var htmlPopup = `<div style="position: absolute; width: 500px; height: 400px; display: block; background-color: green;">beans</div>`;
+	let htmlPopup = document.createElement("div");
 
-		htmlPopup.style.left = "calc(50%-250px)";
-		htmlPopup.style.right = "calc(50%-200px)";
+	htmlPopup.style.cssText = `position: absolute; width: 500px; height: 400px; display: block; background-color: green;`;
+
+	htmlPopup.style.left = "calc(50%-250px)";
+	htmlPopup.style.right = "calc(50%-200px)";
+
+	htmlPopup.innerText = "beans";
 
 	// unselectAuto
 	if (opt('selectable') && opt('unselectAuto')) {
