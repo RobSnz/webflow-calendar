@@ -2787,6 +2787,8 @@ setDefaults({
 
 
 function AgendaView(element, calendar, viewName) {
+		console.err("new print");
+	
 	var t = this;
 	
 	
@@ -3038,6 +3040,8 @@ function AgendaView(element, calendar, viewName) {
 
 
 	function buildDayTable() {
+		console.err("new print");
+		
 		var html = buildDayTableHTML();
 
 		if (dayTable) {
@@ -3063,6 +3067,7 @@ function AgendaView(element, calendar, viewName) {
 
 
 	function buildDayTableHTML() {
+		
 		var html =
 			"<table style='width:100%' class='fc-agenda-days fc-border-separate' cellspacing='0'>" +
 			buildDayTableHeadHTML() +
@@ -3662,6 +3667,7 @@ function AgendaView(element, calendar, viewName) {
 
 function AgendaEventRenderer() {
 	var t = this;
+		console.err("new print");
 	
 	
 	// exports
@@ -3717,6 +3723,8 @@ function AgendaEventRenderer() {
 	
 
 	function renderEvents(events, modifiedEventId) {
+		console.err("new print");
+		
 		var i, len=events.length,
 			dayEvents=[],
 			slotEvents=[];
@@ -3850,6 +3858,7 @@ function AgendaEventRenderer() {
 			height,
 			slotSegmentContainer = getSlotSegmentContainer(),
 			isRTL = opt('isRTL');
+		console.err("new print");
 			
 		// calculate position/dimensions, create html
 		for (i=0; i<segCnt; i++) {
@@ -3969,11 +3978,11 @@ function AgendaEventRenderer() {
 	
 	
 	function slotSegHtml(event, seg) {
-		console.log(event);
 		var html = "<";
 		var url = event.url;
 		var skinCss = getSkinCss(event, opt);
 		var classes = ['fc-event', 'fc-event-vert'];
+		console.err("new print");
 		if (isEventDraggable(event)) {
 			classes.push('fc-event-draggable');
 		}
