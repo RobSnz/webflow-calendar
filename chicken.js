@@ -5905,9 +5905,11 @@ function SelectionManager() {
 			console.error(ev);
 			document.body.appendChild(htmlPopup);
 			
-			document.getElementById("close-button").onclick = () => {
+			document.getElementById("close-button").onclick = (e) => {
+			    e.stopPropagation();
 			  htmlPopup.parentNode.removeChild(htmlPopup);
-			};
+
+				};
 				
 			var ignore = opt('unselectCancel');
 			if (ignore) {
